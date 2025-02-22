@@ -15,14 +15,14 @@ export default function CourseGoalList({
 
 
   if (goals.length === 0) {
-    return <InfoBox mode="hint">No goals found. Please add one.</InfoBox>
+    return <InfoBox mode="hint" >No goals found. Please add one.</InfoBox>
   }
   let warningBox: ReactNode;
   if (goals.length >= 4) {
-    warningBox = <InfoBox mode="warning">You have less than 3 goals.</InfoBox>
+    warningBox = <InfoBox mode="warning"  severity='medium'>You have less than 3 goals.</InfoBox>
   }
   else {
-    warningBox = <InfoBox mode="success">You have 3 or more goals.</InfoBox>
+    warningBox = <InfoBox mode="success"  severity='low'>You have 3 or more goals.</InfoBox>
   }
   return (
     <>
